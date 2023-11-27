@@ -35,9 +35,39 @@ Membaca file CSV 'android_traffic.csv', untuk sepator pada file CSV diindentifik
 ```data.fillna(0, inplace=True)``` <br />
 ```data.head()``` <br />
 
+![image](https://github.com/Griselda20/Malware-Classification-using-Linear-Regression-Method/assets/89493421/ad8274fc-f78a-49c5-9200-8b1f52311c81)
+
 Karena pada dataset ada nilai yang hilang (NaN) diganti dengan nilai 0 menggunakan ```data.fillna(0, inplace=True)```. Kemudian menampilkan beberapa baris pertama.
 
+#### Feature and Target Variable Setup
+```X = data.drop('type', axis=1)```<br />
+```y = data['type']```<br />
 
+Pada matriks fitur X menghapus kolom yang berlabel 'Type' dari dataset. Kami membuat variabel target y dengan memilih kolom 'type'
 
-``` ``` <br />
-``` ``` <br />
+#### Transformasi Data
+```X = pd.get_dummies(X) ``` <br />
+``` label_encoder = LabelEncoder() ``` <br />
+```y = label_encoder.fit_transform(y)```
+
+Mengubah kolom dengan format string ke format numerik
+
+#### Train-Test Split
+
+```from sklearn.model_selection import train_test_split```<br />
+```X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)```
+
+#### Model Training and Prediction
+
+```from sklearn.linear_model import LinearRegression```<br />
+```regressor = LinearRegression()```<br />
+```regressor.fit(X_train, y_train)```<br />
+```y_pred = regressor.predict(X_test)```
+
+#### Evaluation
+```from sklearn.metrics import mean_squared_error, r2_score```<br />
+```mse = mean_squared_error(y_test, y_pred)```<br />
+```r2 = r2_score(y_test, y_pred)```<br />
+```print('Mean Squared Error:', mse)```<br />
+```print('R-squared:', r2)```
+
