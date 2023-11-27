@@ -71,3 +71,5 @@ Mengubah kolom dengan format string ke format numerik
 ```print('Mean Squared Error:', mse)```<br />
 ```print('R-squared:', r2)```
 
+## Tahap 3
+### Penjelasan Visualisasi
