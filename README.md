@@ -21,15 +21,21 @@ Dataset berisi mengenai data traffic android. Informasi yang diberikan melibatka
 ### Penjelasan Code
 #### Data Loading and Preprocessing
 
-```import pandas as pd``` => Mengimpor Pustaka Padas <br /> 
-```data = pd.read_csv('android_traffic.csv', sep=';')``` => Membaca file CSV, dan menentukan separator ';' <br />
-```data.shape``` => Membaca jumlah baris dan kolom <br />
-```data.fillna(0, inplace=True)``` <br />
+```import pandas as pd``` <br /> 
+```data = pd.read_csv('android_traffic.csv', sep=';')``` <br />
+```data.shape``` <br />
 ```data.head()```
 
 ![Screenshot 2023-11-27 094519](https://github.com/Griselda20/Malware-Classification-using-Linear-Regression-Method/assets/89493421/8ab1bd02-ae6b-4e01-be83-d2f20eb1bfdb)
 
+Membaca file CSV 'android_traffic.csv', untuk sepator pada file CSV diindentifikasi sebagai ';'. Kemudian kami memeriksa jumlah baris dan kolom dalam dataset dan menampilkan beberapa baris dari dataset.
 
+##### Mengganti nilai yang hilang (NaN) diganti nilai 0
+
+```data.fillna(0, inplace=True)``` <br />
+```data.head()``` <br />
+
+Karena pada dataset ada nilai yang hilang (NaN) diganti dengan nilai 0 menggunakan ```data.fillna(0, inplace=True)```. Kemudian menampilkan beberapa baris pertama.
 
 
 
