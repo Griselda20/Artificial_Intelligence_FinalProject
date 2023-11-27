@@ -27,6 +27,9 @@ Dataset berisi mengenai data traffic android. Informasi yang diberikan melibatka
 ```data.fillna(0, inplace=True)``` <br />
 ```data.head()```
 
+![Screenshot 2023-11-27 094519](https://github.com/Griselda20/Malware-Classification-using-Linear-Regression-Method/assets/89493421/8ab1bd02-ae6b-4e01-be83-d2f20eb1bfdb)
+
+
 
 
 
