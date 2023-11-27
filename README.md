@@ -17,3 +17,18 @@ https://www.kaggle.com/datasets/xwolf12/network-traffic-android-malware
 Dataset berisi mengenai data traffic android. Informasi yang diberikan melibatkan jumlah paket yang dikirim dan diterima, jumlah byte yang dikirim dan diterima, serta label klasifikasi. Dataset ini berguna untuk berbagai analisis data, seperti pola traffic android.
 
 ## Tahap 2
+
+### Penjelasan Code
+#### Data Loading and Preprocessing
+
+```import pandas as pd``` => Mengimpor Pustaka Padas <br /> 
+```data = pd.read_csv('android_traffic.csv', sep=';')``` => Membaca file CSV, dan menentukan separator ';' <br />
+```data.shape``` => Membaca jumlah baris dan kolom <br />
+```data.fillna(0, inplace=True)``` <br />
+```data.head()```
+
+
+
+
+``` ``` <br />
+``` ``` <br />
