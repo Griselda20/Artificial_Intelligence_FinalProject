@@ -5,7 +5,7 @@ Pada proyek mata kuliah Kecerdasan Buatan kami ditugaskan untuk membuat sebuah m
 Berikut Anggota Kelompok 4 :
 1. 12S21046 - Ruth Marelisa Hutagalung
 2. 12S21048 - Nessy Pentasonia Pangaribuan
-3. 12S21050 - Jessica Wastry Sitorus
+3. 12S21050 - Jessica Wasty Sitorus
 4. 12S21052 - Griselda
 5. 12S21054 - Diah Anastasya Sihombing
 
