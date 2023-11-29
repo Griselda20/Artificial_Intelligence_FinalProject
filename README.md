@@ -19,12 +19,17 @@ Dataset berisi mengenai data traffic android. Informasi yang diberikan melibatka
 ## Tahap 2
 
 ### Penjelasan Code
-#### Data Loading and Preprocessing
 
-```import pandas as pd``` <br /> 
-```from sklearn.model_selection import train_test_split``` <br />
-```from sklearn.linear_model import LogisticRegression``` <br />
+#### Import libraries
+```import pandas as pd```<br />
+```from sklearn.preprocessing import LabelEncoder```<br />
+```from sklearn.model_selection import train_test_split```<br />
+```from sklearn.linear_model import LogisticRegression```<br />
 ```from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score```
+
+#### Data Loading and Preprocessing
+```data = pd.read_csv('android_traffic.csv', sep=';')```<br />
+```data.head()```
 
 ![Screenshot 2023-11-27 094519](https://github.com/Griselda20/Malware-Classification-using-Linear-Regression-Method/assets/89493421/8ab1bd02-ae6b-4e01-be83-d2f20eb1bfdb)
 
@@ -54,22 +59,26 @@ Mengubah kolom dengan format string ke format numerik
 
 #### Train-Test Split
 
-```from sklearn.model_selection import train_test_split```<br />
 ```X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)```
 
 #### Model Training and Prediction
 
-```from sklearn.linear_model import LinearRegression```<br />
-```regressor = LinearRegression()```<br />
-```regressor.fit(X_train, y_train)```<br />
-```y_pred = regressor.predict(X_test)```
+```model = LogisticRegression()```<br />
+```model.fit(X_train, y_train)```<br />
+```y_pred = model.predict(X_test)```
 
 #### Evaluation
-```from sklearn.metrics import mean_squared_error, r2_score```<br />
-```mse = mean_squared_error(y_test, y_pred)```<br />
-```r2 = r2_score(y_test, y_pred)```<br />
-```print('Mean Squared Error:', mse)```<br />
-```print('R-squared:', r2)```
+```accuracy = accuracy_score(y_test, y_pred)```<br />
+```precision = precision_score(y_test, y_pred)```<br />
+```recall = recall_score(y_test, y_pred)```<br />
+```f1 = f1_score(y_test, y_pred)```<br />
+```roc_auc = roc_auc_score(y_test, model.predict_proba(X_test)[:,1])```<br />
+
+```print(f'Accuracy: {accuracy}')```<br />
+```print(f'Precision: {precision}')```<br />
+```print(f'Recall: {recall}')```<br />
+```print(f'F1 Score: {f1}')```<br />
+```print(f'ROC AUC Score:{roc_auc}')```
 
 ## Tahap 3
 ### Penjelasan Visualisasi
