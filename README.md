@@ -108,10 +108,10 @@ Visualizing confusion matrix
 ```plt.xlabel('Predicted Label')```<br />
 ```plt.ylabel('True Label')```<br />
 ```plt.tight_layout()```<br />
-```plt.show()```
+```plt.show()```<br />
 
-Hasil yang diperoleh :
-
+Hasil yang diperoleh :<br />
+![image](https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493421/770703e9-7ad4-46ca-b94f-e1348b1c06b2)
 
 #### Reciver Operating Characteristic (ROC) Curve
 ```from sklearn.metrics import roc_curve, roc_auc_score```<br />
@@ -135,6 +135,7 @@ Plot kurva ROC (Receiver Operating Characteristic)<br />
 ```plt.legend()```<br />
 ```plt.show()```<br />
 Hasil yang diperoleh : <br />
+![image](https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493421/ef94b679-7101-44ca-9a33-236a85b3fc10)
 
 #### Precision-Recall Curve
 Menghitung nilai precision, recall, dan threshold<br />
@@ -145,6 +146,7 @@ Menghitung nilai Average Precision (AP)<br />
 ```print(f"Average Precision (AP): {ap:.4f}")```
 
 Hasil yang diperoleh : <br />
+![image](https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493421/6a955ff0-61cc-4dd7-915f-236d10c99045)
 
 Menghitung nilai precision, recall, dan threshold<br />
 ```precision, recall, thresholds = precision_recall_curve(y_test, y_prob)```<br />
@@ -159,4 +161,4 @@ Menghitung nilai Average Precision (AP)<br />
 ```plt.show()```<br />
 
 Hasil yang diperoleh : <br />
-
+![image](https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493421/c59d0809-d3fa-48e8-a17a-f249ec45731b)
