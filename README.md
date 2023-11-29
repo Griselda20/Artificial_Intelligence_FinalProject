@@ -1,6 +1,6 @@
-# Network Traffic Adroid Malware Classification Using Linear Regression Method
+# Network Traffic Adroid Malware Classification Using Logistic Regression Method (Binary Logistic Regression)
 
-Pada proyek mata kuliah Kecerdasan Buatan kami ditugaskan untuk membuat sebuah model Machine Learning. Kelompok kami menerapkan paradigma ```Supervised Learning``` dengan tipe ```Classification``` yang menggunakan ``` Linear Regression Method```.
+Pada proyek mata kuliah Kecerdasan Buatan kami ditugaskan untuk membuat sebuah model Machine Learning. Kelompok kami menerapkan paradigma ```Supervised Learning``` dengan tipe ```Classification``` yang menggunakan ``` Logistic Regression Method (Binary Logistic Regression)```.
 
 Berikut Anggota Kelompok 4 :
 1. 12S21046 - Ruth Marelisa Hutagalung
@@ -22,9 +22,9 @@ Dataset berisi mengenai data traffic android. Informasi yang diberikan melibatka
 #### Data Loading and Preprocessing
 
 ```import pandas as pd``` <br /> 
-```data = pd.read_csv('android_traffic.csv', sep=';')``` <br />
-```data.shape``` <br />
-```data.head()```
+```from sklearn.model_selection import train_test_split``` <br />
+```from sklearn.linear_model import LogisticRegression``` <br />
+```from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score```
 
 ![Screenshot 2023-11-27 094519](https://github.com/Griselda20/Malware-Classification-using-Linear-Regression-Method/assets/89493421/8ab1bd02-ae6b-4e01-be83-d2f20eb1bfdb)
 
