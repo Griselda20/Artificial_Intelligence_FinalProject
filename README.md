@@ -30,6 +30,7 @@ Dataset berisi mengenai data traffic android. Informasi yang diberikan melibatka
 ```from sklearn.linear_model import LogisticRegression```<br />
 ```from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score```<br />
 ```from sklearn.metrics import confusion_matrix```<br />
+```from sklearn.metrics import roc_curve, roc_auc_score```<br />
 ```from sklearn.metrics import precision_recall_curve, average_precision_score```
 
 #### Data Loading and Preprocessing
@@ -92,10 +93,10 @@ Berikut adalah hasil yang didapatkan :<br />
 ### Penjelasan Visualisasi
 #### Menampilkan Confusion Matrix
 
-Creating confusion matrix
+Creating confusion matrix<br />
 ```cm = confusion_matrix(y_test, y_pred)```<br />
 
-Visualizing confusion matrix
+Visualizing confusion matrix<br />
 ```plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)```<br />
 ```plt.title('Confusion Matrix')```<br />
 ```plt.colorbar()```<br />
@@ -114,7 +115,6 @@ Hasil yang diperoleh :<br />
 ![image](https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493421/770703e9-7ad4-46ca-b94f-e1348b1c06b2)
 
 #### Reciver Operating Characteristic (ROC) Curve
-```from sklearn.metrics import roc_curve, roc_auc_score```<br />
 
 Menilai kemungkinan prediksi pada data uji<br />
 ```y_prob = model.predict_proba(X_test)[:, 1]```<br />
