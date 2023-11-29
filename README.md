@@ -22,10 +22,15 @@ Dataset berisi mengenai data traffic android. Informasi yang diberikan melibatka
 
 #### Import libraries
 ```import pandas as pd```<br />
+```import numpy as np```<br />
+```import matplotlib.pyplot as plt```<br />
+```from sklearn.datasets import make_classification```<br />
 ```from sklearn.preprocessing import LabelEncoder```<br />
 ```from sklearn.model_selection import train_test_split```<br />
 ```from sklearn.linear_model import LogisticRegression```<br />
-```from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score```
+```from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score```<br />
+```from sklearn.metrics import confusion_matrix```<br />
+```from sklearn.metrics import precision_recall_curve, average_precision_score```
 
 #### Data Loading and Preprocessing
 ```data = pd.read_csv('android_traffic.csv', sep=';')```<br />
@@ -80,5 +85,78 @@ Mengubah kolom dengan format string ke format numerik
 ```print(f'F1 Score: {f1}')```<br />
 ```print(f'ROC AUC Score:{roc_auc}')```
 
+Berikut adalah hasil yang didapatkan :<br />
+![image](https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493421/e2bcde14-68c9-4329-9431-0a6303f3124b)
+
 ## Tahap 3
 ### Penjelasan Visualisasi
+#### Menampilkan Confusion Matrix
+
+Creating confusion matrix
+```cm = confusion_matrix(y_test, y_pred)```<br />
+
+Visualizing confusion matrix
+```plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)```<br />
+```plt.title('Confusion Matrix')```<br />
+```plt.colorbar()```<br />
+
+```classes = np.unique(y)```<br />
+```tick_marks = np.arange(len(classes))```<br />
+```plt.xticks(tick_marks, classes)```<br />
+```plt.yticks(tick_marks, classes)```<br />
+
+```plt.xlabel('Predicted Label')```<br />
+```plt.ylabel('True Label')```<br />
+```plt.tight_layout()```<br />
+```plt.show()```
+
+Hasil yang diperoleh :
+
+
+#### Reciver Operating Characteristic (ROC) Curve
+```from sklearn.metrics import roc_curve, roc_auc_score```<br />
+
+Menilai kemungkinan prediksi pada data uji<br />
+```y_prob = model.predict_proba(X_test)[:, 1]```<br />
+
+Menghitung nilai TPR (True Positive Rate), FPR (False Positive Rate), dan threshold<br />
+```false_positive_rate, true_positive_rate, thresholds = roc_curve(y_test, y_prob)```<br />
+
+Menghitung nilai AUC (Area Under Curve)<br />
+```area_under_curve = roc_auc_score(y_test, y_prob)```<br />
+
+Plot kurva ROC (Receiver Operating Characteristic)<br />
+```plt.figure(figsize=(8, 6))```<br />
+```plt.plot(false_positive_rate, true_positive_rate, label=f'AUC = {area_under_curve:.2f}')```<br />
+```plt.plot([0, 1], [0, 1], linestyle='--', color='grey')```<br />
+```plt.xlabel('False Positive Rate')```<br />
+```plt.ylabel('True Positive Rate')```<br />
+```plt.title('Receiver Operating Characteristic (ROC) Curve')```<br />
+```plt.legend()```<br />
+```plt.show()```<br />
+Hasil yang diperoleh : <br />
+
+#### Precision-Recall Curve
+Menghitung nilai precision, recall, dan threshold<br />
+```precision, recall, thresholds = precision_recall_curve(y_test, y_prob)```<br />
+
+Menghitung nilai Average Precision (AP)<br />
+```ap = average_precision_score(y_test, y_prob)```<br />
+```print(f"Average Precision (AP): {ap:.4f}")```
+
+Hasil yang diperoleh : <br />
+
+Menghitung nilai precision, recall, dan threshold<br />
+```precision, recall, thresholds = precision_recall_curve(y_test, y_prob)```<br />
+
+Menghitung nilai Average Precision (AP)<br />
+```plt.figure(figsize=(8, 6))```<br />
+```plt.plot(recall, precision, label=f'AP = {ap:.2f}')```<br />
+```plt.xlabel('Recall')```<br />
+```plt.ylabel('Precision')```<br />
+```plt.title('Precision-Recall Curve')```<br />
+```plt.legend()```<br />
+```plt.show()```<br />
+
+Hasil yang diperoleh : <br />
+
