@@ -164,6 +164,5 @@ Menghitung nilai Average Precision (AP)<br />
 ```plt.show()```<br />
 
 Hasil yang diperoleh : <br />
-![image]
-(https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493421/c59d0809-d3fa-48e8-a17a-f249ec45731b)
+https://github.com/Griselda20/Artificial_Intelligence_FinalProject/issues/7#issue-2016809989
 
