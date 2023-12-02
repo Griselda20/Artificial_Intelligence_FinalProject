@@ -164,5 +164,24 @@ Menghitung nilai Average Precision (AP)<br />
 ```plt.show()```<br />
 
 Hasil yang diperoleh : <br />
-https://github.com/Griselda20/Artificial_Intelligence_FinalProject/issues/7#issue-2016809989
+![output1](https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493491/8e075772-dc46-42e8-af11-de60062a8b43)
+
+### Tabel Efektivitas
+import pandas as pd<br />
+```from IPython.display import display, HTML```<br />
+
+Create the DataFrame<br />
+```data = pd.DataFrame({```<br />
+```"Status": ["Accuracy", "Precision", "Recall", "F1 Score", "ROC AUC Score"],```<br />
+```"Value": [0.6832377310388783, 0.7768595041322314, 0.2979397781299525, 0.4306987399770905, 0.6742757798059735]```<br />
+```})```<br />
+```df = pd.DataFrame(data, columns=['Status', 'Value'])```<br />
+```display(df)```<br />
+Hasil yang diperoleh : <br />
+<img width="173" alt="output2" src="https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493491/8a242388-5869-493f-87f3-d1679b2b39f3">
+
+
+
+
+
 
