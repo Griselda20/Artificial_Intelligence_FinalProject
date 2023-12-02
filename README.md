@@ -1,4 +1,4 @@
-# Network Traffic Adroid Malware Classification Using Logistic Regression Method (Binary Logistic Regression)
+# Network Traffic Android Malware Classification Using Logistic Regression Method (Binary Logistic Regression)
 
 Pada proyek mata kuliah Kecerdasan Buatan kami ditugaskan untuk membuat sebuah model Machine Learning. Kelompok kami menerapkan paradigma ```Supervised Learning``` dengan tipe ```Classification``` yang menggunakan ``` Logistic Regression Method (Binary Logistic Regression)```.
 
@@ -112,6 +112,7 @@ Visualizing confusion matrix<br />
 ```plt.show()```<br />
 
 Hasil yang diperoleh :<br />
+
 
 
 #### Reciver Operating Characteristic (ROC) Curve
