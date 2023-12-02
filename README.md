@@ -112,6 +112,8 @@ Visualizing confusion matrix<br />
 ```plt.show()```<br />
 
 Hasil yang diperoleh :<br />
+![output](https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493491/b03d4d1f-8fa8-4808-b8a2-f002c28bce2c)
+
 
 
 
