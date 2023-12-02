@@ -112,7 +112,7 @@ Visualizing confusion matrix<br />
 ```plt.show()```<br />
 
 Hasil yang diperoleh :<br />
-![image](https://github.com/Griselda20/Artificial_Intelligence_FinalProject/assets/89493421/770703e9-7ad4-46ca-b94f-e1348b1c06b2)
+
 
 #### Reciver Operating Characteristic (ROC) Curve
 
