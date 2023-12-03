@@ -93,13 +93,18 @@ Berikut adalah hasil yang didapatkan :<br />
 ### Penjelasan Visualisasi
 #### Menampilkan Confusion Matrix
 
-Creating confusion matrix<br />
+Creating confusion matrix
 ```cm = confusion_matrix(y_test, y_pred)```<br />
 
-Visualizing confusion matrix<br />
+Visualizing confusion matrix
 ```plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)```<br />
 ```plt.title('Confusion Matrix')```<br />
 ```plt.colorbar()```<br />
+
+Adding text to the confusion matrix
+```for i in range(len(cm)):```<br />
+    ```for j in range(len(cm[0])):```<br />
+        ```plt.text(j, i, cm[i, j], ha='center', va='center', color='red')```<br />
 
 ```classes = np.unique(y)```<br />
 ```tick_marks = np.arange(len(classes))```<br />
